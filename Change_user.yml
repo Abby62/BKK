@@ -1,5 +1,6 @@
 ---
 - name: Change user and permission
+  hosts: all
   win_acl:
     user: Abby
     path: C:\Temp\test.conf
