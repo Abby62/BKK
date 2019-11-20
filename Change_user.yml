@@ -4,7 +4,7 @@
   tasks:
   - name: User Permission
       win_acl:
-       user: Abby
+        user: Abby
         path: C:\Temp\test.conf
         type: allow
-        rights: Full
+        rights: FullControl
