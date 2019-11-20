@@ -1,0 +1,7 @@
+---
+- name: Change user and permission
+  win_acl:
+    user: Abby
+    path: C:\Temp\test.conf
+    type: allow
+    rights: Full
