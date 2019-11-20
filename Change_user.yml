@@ -1,8 +1,9 @@
 ---
 - name: Change user and permission
   hosts: all
-  win_acl:
-    user: Abby
-    path: C:\Temp\test.conf
-    type: allow
-    rights: Full
+  tasks:
+    win_acl:
+      user: Abby
+      path: C:\Temp\test.conf
+      type: allow
+      rights: Full
