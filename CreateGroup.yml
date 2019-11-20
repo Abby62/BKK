@@ -1,0 +1,9 @@
+---
+- name: Create user and group and profile
+  hosts: all
+  tasks:
+  - name: Create a new group
+    win_group:
+      name: RH.gg
+      description: Deploy Group
+      state: present
