@@ -1,10 +1,11 @@
 ---
 - name: Testing handlers
   hosts: all
+  force_handlers: true
   tasks:
-  - name: 7zip
+  - name: flashplayerppapi
     win_chocolatey:
-      name: 7zip
+      name: flashplayerppapi
       state: present
     notify: reboot
   - name: failing the task
