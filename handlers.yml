@@ -4,9 +4,12 @@
   tasks:
   - name: Install Dotnet4.6.1
     win_chocolatey:
-      name: Dotnet4.6.1
+      name: vlc
       state: present
     notify: reboot
+  - name: failing the task
+    fail:
+      msg: failing the task as testing requires
 
   handlers:
   - name: reboot
