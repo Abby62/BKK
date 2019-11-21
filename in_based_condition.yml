@@ -2,7 +2,7 @@
 - name: Testing a condition
   hosts: all
   vars:
-    my_service: Web_Server
+    my_service: Web-Server
     supported_distros:
     - "Microsoft Windows Server 2016 Datacenter"
     - "Microsoft Windows Server 2016 Core"
@@ -14,4 +14,6 @@
     win_feature:
       name: "{{my_service}}"
       state: present
+      include_sub_features: yes
+      include_management_tools: yes
     when: ansible_facts ['distribution'] in supported_distros
