@@ -1,0 +1,13 @@
+---
+- name: Testing handlers
+  hosts: all
+  tasks:
+  - name: Install Dotnet4.6.1
+    win_chocolatey:
+      name: Dotnet4.6.1
+      state: present
+    notify: reboot
+
+  handlers:
+  - name: reboot
+    win_reboot:
