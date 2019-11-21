@@ -10,7 +10,7 @@
 
   - name: Adding a local and domain user to a local group.
     win_group_membership:
-      name: User
+      name: RH.gg
       members:
       - user_Abby
       state: present
