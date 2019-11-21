@@ -11,4 +11,4 @@
       state: present
       include_sub_features: yes
       include_management_tools: yes
-    when: my_service is defined
+    when: my_service is undefined
