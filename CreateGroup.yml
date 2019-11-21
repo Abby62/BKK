@@ -8,7 +8,9 @@
       description: Deploy Group
       state: present
 
-  - name: Add the user 'user_Abby' into group 'RH.gg'
-    user:
-      name: user_Abby
-      group: RH.gg
+  - name: Adding a local and domain user to a local group.
+    win_group_membership:
+      name: User
+      members:
+      - user_Abby
+      state: present
