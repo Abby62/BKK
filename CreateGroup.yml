@@ -17,5 +17,5 @@
 
   - name: Create a local profile for an account.
     win_user_profile:
-      username: newuser
+      username: user_Abby
       state: present
