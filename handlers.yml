@@ -2,15 +2,16 @@
 - name: Testing handlers
   hosts: all
   tasks:
-  - name: Install Dotnet4.6.1
+  - name: winrar
     win_chocolatey:
-      name: vlc
+      name: winrar
       state: present
     notify: reboot
   - name: failing the task
     debug:
       msg: failing the task as testing requires
       failed_when: true
+      ignore_errors: true
   - name: This is another task
     debug:
       final task
